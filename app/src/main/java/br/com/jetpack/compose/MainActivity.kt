@@ -21,6 +21,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import br.com.jetpack.compose.ui.theme.Purple500
 
 
 class MainActivity : ComponentActivity() {
@@ -52,19 +53,19 @@ class MainActivity : ComponentActivity() {
 //                Spacer(modifier = Modifier.padding(10.dp))
                 Text(
                     text = getString(R.string.string_test_name),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentWidth(Alignment.Start),
-                    color = Color.Blue,
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .wrapContentWidth(Alignment.Start),
+                    color = Purple500,
                     fontStyle = FontStyle.Normal,
                     style = MaterialTheme.typography.body2
                 )
                 Text(
                     text = getString(R.string.string_test_job),
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .wrapContentWidth(Alignment.Start),
-                    color = Color.Blue,
+//                    modifier = Modifier
+//                        .fillMaxWidth()
+//                        .wrapContentWidth(Alignment.Start),
+                    color = Purple500,
                     fontStyle = FontStyle.Normal,
                     style = MaterialTheme.typography.body1
                 )
