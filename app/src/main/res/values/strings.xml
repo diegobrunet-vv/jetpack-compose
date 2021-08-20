@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string name="string_test_name">Jose da Silva</string>
+    <string name="string_test_job">Analista de relações</string>
 </resources>
