@@ -21,7 +21,7 @@ fun HomeScreen(
             Text(text = "Column sample")
         }
 
-        Spacer(modifier = Modifier.padding(bottom = 5.dp))
+        Spacer(modifier = Modifier.padding(top = 5.dp))
 
         Button(onClick = { navController.navigate(MainDestinations.ROW_CONTAINER_ROUTE) }) {
             Text(text = "Row sample")

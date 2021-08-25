@@ -11,7 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.jetpack.compose.R
 import br.com.jetpack.compose.presentation.home.HomeScreen
-import br.com.jetpack.compose.presentation.home.HomeViewModel
+import br.com.jetpack.compose.presentation.MainViewModel
 import br.com.jetpack.compose.presentation.ui.components.appbar.InsetAwareTopAppBar
 import br.com.jetpack.compose.presentation.ui.components.column.ColumnContainer
 import br.com.jetpack.compose.presentation.ui.components.row.RowContainer
@@ -20,7 +20,7 @@ import br.com.jetpack.compose.utils.MainDestinations
 
 @Composable
 fun MainContainer(
-    homeViewModel: HomeViewModel
+    mainViewModel: MainViewModel
 ) {
     AppTheme(darkTheme = false) {
 
@@ -37,7 +37,7 @@ fun MainContainer(
             }
         ) {
             MainNavGraph(
-                homeViewModel = homeViewModel,
+                mainViewModel = mainViewModel,
                 navController = navController
             )
         }
@@ -46,7 +46,7 @@ fun MainContainer(
 
 @Composable
 fun MainNavGraph(
-    homeViewModel: HomeViewModel,
+    mainViewModel: MainViewModel,
     navController: NavHostController = rememberNavController(),
     startDestination: String = MainDestinations.HOME_ROUTE
 ) {
@@ -59,10 +59,10 @@ fun MainNavGraph(
             HomeScreen(navController = navController)
         }
         composable(MainDestinations.COLUMN_CONTAINER_ROUTE) {
-            ColumnContainer(homeViewModel)
+            ColumnContainer(mainViewModel)
         }
         composable(MainDestinations.ROW_CONTAINER_ROUTE) {
-            RowContainer(homeViewModel)
+            RowContainer(mainViewModel)
         }
     }
 }

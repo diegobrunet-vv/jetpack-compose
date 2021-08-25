@@ -5,19 +5,18 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.core.view.WindowCompat
-import br.com.jetpack.compose.presentation.home.HomeViewModel
 import br.com.jetpack.compose.presentation.ui.main.MainContainer
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private val homeViewModel: HomeViewModel by viewModels()
+    private val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         WindowCompat.setDecorFitsSystemWindows(window, true)
 
-        setContent { MainContainer(homeViewModel) }
+        setContent { MainContainer(mainViewModel) }
     }
 }

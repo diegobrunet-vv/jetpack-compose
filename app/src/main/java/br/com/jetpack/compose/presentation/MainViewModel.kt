@@ -1,4 +1,4 @@
-package br.com.jetpack.compose.presentation.home
+package br.com.jetpack.compose.presentation
 
 import android.content.ContentValues.TAG
 import android.util.Log
@@ -14,7 +14,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(
+class MainViewModel @Inject constructor(
     private val userRepository: UserRepository
 ) : ViewModel() {
 

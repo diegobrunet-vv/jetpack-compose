@@ -22,16 +22,16 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.jetpack.compose.R
 import br.com.jetpack.compose.data.model.User
-import br.com.jetpack.compose.presentation.home.HomeViewModel
+import br.com.jetpack.compose.presentation.MainViewModel
 import br.com.jetpack.compose.presentation.ui.theme.Purple500
 
 private lateinit var userData: User
 
 @Composable
 fun ColumnContainer(
-    homeViewModel: HomeViewModel
+    mainViewModel: MainViewModel
 ) {
-    val user = homeViewModel.user.value
+    val user = mainViewModel.user.value
     user?.let { userData = it }
     ColumnView()
 }

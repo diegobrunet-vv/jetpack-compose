@@ -14,15 +14,15 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.jetpack.compose.data.model.User
-import br.com.jetpack.compose.presentation.home.HomeViewModel
+import br.com.jetpack.compose.presentation.MainViewModel
 import br.com.jetpack.compose.presentation.ui.theme.Purple200
 import br.com.jetpack.compose.presentation.ui.theme.Purple500
 
 private lateinit var user: User
 
 @Composable
-fun RowContainer(homeViewModel: HomeViewModel) {
-    homeViewModel.user.value?.let { user = it }
+fun RowContainer(mainViewModel: MainViewModel) {
+    mainViewModel.user.value?.let { user = it }
     RowContainerView()
 }
 
