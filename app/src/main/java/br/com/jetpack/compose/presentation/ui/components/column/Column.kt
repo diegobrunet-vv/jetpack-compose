@@ -6,6 +6,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
@@ -24,8 +25,10 @@ import br.com.jetpack.compose.R
 import br.com.jetpack.compose.data.model.User
 import br.com.jetpack.compose.presentation.MainViewModel
 import br.com.jetpack.compose.presentation.ui.theme.Purple500
+import br.com.jetpack.compose.utils.NO_CONTENT
 
-private lateinit var userData: User
+private var userData: User? = null
+
 
 @Composable
 fun ColumnContainer(
@@ -38,10 +41,12 @@ fun ColumnContainer(
 
 @Preview
 @Composable
-fun ColumnView() {
+fun ColumnView(
+) {
     Column(
         modifier = Modifier
             .padding(16.dp)
+            .fillMaxWidth()
             .background(Color.White)
     ) {
         Column(
@@ -63,20 +68,19 @@ fun ColumnView() {
             }
             Spacer(modifier = Modifier.padding(top = 5.dp))
             Text(
-                text = userData.name,
+                text = userData?.name ?: NO_CONTENT,
                 color = Purple500,
                 fontStyle = FontStyle.Normal,
-                style = MaterialTheme.typography.body1
+                style = MaterialTheme.typography.body1,
             )
             Spacer(modifier = Modifier.padding(top = 3.dp))
             Text(
-                text = userData.job,
+                text = userData?.job ?: NO_CONTENT,
                 color = Purple500,
                 fontStyle = FontStyle.Normal,
                 style = MaterialTheme.typography.body2
             )
         }
-
     }
 }
 
