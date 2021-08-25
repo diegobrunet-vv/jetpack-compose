@@ -1,4 +1,4 @@
-package br.com.jetpack.compose.ui.theme
+package br.com.jetpack.compose.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
