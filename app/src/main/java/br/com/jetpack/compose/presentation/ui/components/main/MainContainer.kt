@@ -1,4 +1,4 @@
-package br.com.jetpack.compose.presentation.ui.main
+package br.com.jetpack.compose.presentation.ui.components.main
 
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
@@ -10,9 +10,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import br.com.jetpack.compose.R
-import br.com.jetpack.compose.presentation.home.HomeScreen
 import br.com.jetpack.compose.presentation.MainViewModel
-import br.com.jetpack.compose.presentation.ui.components.appbar.InsetAwareTopAppBar
+import br.com.jetpack.compose.presentation.home.HomeScreen
+import br.com.jetpack.compose.presentation.ui.components.appbar.TopAppBar
 import br.com.jetpack.compose.presentation.ui.components.column.ColumnContainer
 import br.com.jetpack.compose.presentation.ui.components.row.RowContainer
 import br.com.jetpack.compose.presentation.ui.theme.AppTheme
@@ -31,7 +31,7 @@ fun MainContainer(
             scaffoldState = scaffoldState,
             topBar = {
                 val title = stringResource(id = R.string.app_name)
-                InsetAwareTopAppBar(
+                TopAppBar(
                     title = { Text(text = title) }
                 )
             }

@@ -15,7 +15,7 @@ import com.google.accompanist.insets.navigationBarsPadding
 import com.google.accompanist.insets.statusBarsPadding
 
 @Composable
-fun InsetAwareTopAppBar(
+fun TopAppBar(
     title: @Composable () -> Unit,
     modifier: Modifier = Modifier,
     navigationIcon: @Composable (() -> Unit)? = null,
