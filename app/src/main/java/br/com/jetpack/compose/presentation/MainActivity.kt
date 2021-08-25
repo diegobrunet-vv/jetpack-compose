@@ -5,7 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.core.view.WindowCompat
-import br.com.jetpack.compose.presentation.ui.components.main.MainContainer
+import br.com.jetpack.compose.presentation.ui.components.MainContainer
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
