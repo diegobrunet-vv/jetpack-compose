@@ -1,5 +1,6 @@
 package br.com.jetpack.compose.presentation.ui.components
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Text
 import androidx.compose.material.rememberScaffoldState
@@ -12,6 +13,7 @@ import br.com.jetpack.compose.presentation.ui.components.appbar.TopAppBar
 import br.com.jetpack.compose.presentation.ui.components.nav.NavGraph
 import br.com.jetpack.compose.presentation.ui.theme.AppTheme
 
+@ExperimentalFoundationApi
 @Composable
 fun MainContainer(
     mainViewModel: MainViewModel

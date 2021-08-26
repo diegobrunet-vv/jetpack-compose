@@ -6,6 +6,8 @@ val user = User(
     name = "Jose da Silva",
     username = "josedasilva",
     job = "Funcionário Publico",
+    email = "josedasilva@email.com",
+    age = 28,
     url = "https://www.google.com.br"
 )
 
